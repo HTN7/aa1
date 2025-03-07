@@ -111,30 +111,9 @@
         .flap > .smiley {
             transform: rotate(90deg);
             transition-delay: 0.4s;
-        }
+        } 
     </style>
-</head>
-     </style>
-</head>
-<audio id="music" src="nhac.mp3"></audio>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const envelope = document.querySelector('.envelope-wrapper');
-        const music = document.getElementById('music');
-
-        envelope.addEventListener('click', () => {
-            envelope.classList.toggle('flap');
-            
-            if (envelope.classList.contains('flap')) {
-                music.play(); // Phát nhạc khi mở thư
-            } else {
-                music.pause(); // Dừng nhạc nếu đóng thư
-                music.currentTime = 0; // Đặt lại nhạc từ đầu
-            }
-        });
-    });
-</script>
 <body>
     <div class="container">
         <div class="envelope-wrapper">
@@ -155,13 +134,23 @@
             <div class="smiley">😊</div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const envelope = document.querySelector('.envelope-wrapper');
-            envelope.addEventListener('click', () => {
-                envelope.classList.toggle('flap');
-            });
+<audio id="music" src="nhac.mp3"></audio>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const envelope = document.querySelector('.envelope-wrapper');
+        const music = document.getElementById('music');
+
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+            
+            if (envelope.classList.contains('flap')) {
+                music.play(); // Phát nhạc khi mở thư
+            } else {
+                music.pause(); // Dừng nhạc nếu đóng thư
+                music.currentTime = 0; // Đặt lại nhạc từ đầu
+            }
         });
-    </script>
+    });
+</script>
 </body>
 </html>
